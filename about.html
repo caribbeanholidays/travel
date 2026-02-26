@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Caribbean Holidays — Srinagar's trusted Kashmir tour operator. Learn our story, mission, and why hundreds choose us for Kashmir travel.">
+  <title>About Us – Caribbean Holidays | Kashmir Tour Operator</title>
+  <style>
+/* ============================================================
+   Caribbean Holidays — style.css
+   Color Palette: Deep Ocean Blue, Teal, Gold Accents, White
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* ── CSS Variables ────────────────────────────────────────── */
+:root {
+  --navy:      #0b1f3a;
+  --blue:      #134074;
+  --teal:      #0d9488;
+  --teal-light:#14b8a6;
+  --gold:      #d4a853;
+  --gold-light:#f0c96b;
+  --white:     #ffffff;
+  --off-white: #f7f9fc;
+  --text:      #1e293b;
+  --text-muted:#64748b;
+  --border:    #e2e8f0;
+  --shadow-sm: 0 2px 8px rgba(11,31,58,0.08);
+  --shadow-md: 0 8px 32px rgba(11,31,58,0.14);
+  --shadow-lg: 0 20px 60px rgba(11,31,58,0.18);
+  --radius:    14px;
+  --transition:0.35s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ── Reset ───────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:'DM Sans',sans-serif;
+  color:var(--text);
+  background:var(--white);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+
+/* ── Typography ──────────────────────────────────────────── */
+h1,h2,h3,h4{font-family:'Playfair Display',serif;line-height:1.2}
+h1{font-size:clamp(2.4rem,5vw,4rem)}
+h2{font-size:clamp(1.8rem,3.5vw,2.8rem)}
+h3{font-size:clamp(1.2rem,2vw,1.6rem)}
+
+/* ── Utility ─────────────────────────────────────────────── */
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+.section-tag{
+  display:inline-block;
+  font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--teal);background:rgba(13,148,136,.1);
+  padding:6px 14px;border-radius:100px;margin-bottom:14px;
+}
+.section-title{color:var(--navy);margin-bottom:12px}
+.section-sub{color:var(--text-muted);font-size:1.05rem;max-width:560px}
+.section-header{text-align:center;margin-bottom:56px}
+.section-header .section-sub{margin:0 auto}
+
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:14px 32px;border-radius:100px;
+  font-family:'DM Sans',sans-serif;font-weight:600;font-size:.95rem;
+  cursor:pointer;border:none;transition:var(--transition);
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--teal),var(--blue));
+  color:var(--white);
+  box-shadow:0 4px 20px rgba(13,148,136,.4);
+}
+.btn-primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 28px rgba(13,148,136,.55);
+}
+.btn-outline{
+  background:transparent;color:var(--white);
+  border:2px solid rgba(255,255,255,.55);
+  backdrop-filter:blur(4px);
+}
+.btn-outline:hover{
+  background:rgba(255,255,255,.15);
+  border-color:var(--white);
+}
+.btn-gold{
+  background:linear-gradient(135deg,var(--gold),var(--gold-light));
+  color:var(--navy);
+  box-shadow:0 4px 20px rgba(212,168,83,.4);
+}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(212,168,83,.55);}
+
+/* ── Sticky Header / Nav ─────────────────────────────────── */
+.site-header{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(11,31,58,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.07);
+  box-shadow:0 2px 24px rgba(0,0,0,.25);
+}
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 0;
+}
+.nav-logo{
+  display:flex;align-items:center;gap:12px;
+}
+.nav-logo .logo-icon{
+  width:42px;height:42px;background:linear-gradient(135deg,var(--teal),var(--blue));
+  border-radius:10px;display:grid;place-items:center;
+  font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--white);
+}
+.nav-logo .logo-text{
+  font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;
+  color:var(--white);line-height:1.1;
+}
+.nav-logo .logo-text span{display:block;font-size:.7rem;font-weight:400;color:var(--teal-light);font-family:'DM Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.nav-links{
+  display:flex;align-items:center;gap:36px;
+}
+.nav-links a{
+  color:rgba(255,255,255,.8);font-weight:500;font-size:.95rem;
+  transition:color .25s;position:relative;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;
+  background:var(--teal);border-radius:2px;transition:width .3s;
+}
+.nav-links a:hover,
+.nav-links a.active{color:var(--white);}
+.nav-links a:hover::after,
+.nav-links a.active::after{width:100%}
+.nav-cta{margin-left:8px}
+
+/* Hamburger */
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:var(--transition)}
+
+/* ── Hero Section ────────────────────────────────────────── */
+.hero{
+  min-height:100vh;position:relative;display:flex;align-items:center;
+  /*
+  ── BACKGROUND IMAGE ──────────────────────────────────────
+  Replace the gradient below with your hero image:
+  background: url('../images/hero-kashmir.jpg') center/cover no-repeat;
+  ─────────────────────────────────────────────────────────
+  */
+  background:
+    linear-gradient(160deg,rgba(11,31,58,.85) 0%,rgba(13,148,136,.4) 100%),
+    linear-gradient(135deg,#0b1f3a 0%,#134074 40%,#0d9488 100%);
+  overflow:hidden;
+}
+/* Decorative pattern overlay */
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:radial-gradient(circle at 20% 80%,rgba(13,148,136,.15) 0%,transparent 50%),
+                   radial-gradient(circle at 80% 20%,rgba(212,168,83,.1) 0%,transparent 40%);
+  pointer-events:none;
+}
+.hero-content{
+  position:relative;z-index:1;max-width:720px;
+  animation:heroFadeIn .9s ease both;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.1);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.2);
+  padding:8px 18px;border-radius:100px;margin-bottom:28px;
+  font-size:.8rem;font-weight:600;color:var(--gold-light);
+  letter-spacing:.1em;text-transform:uppercase;
+}
+.hero-badge::before{content:'✦';font-size:.7rem}
+.hero h1{
+  color:var(--white);margin-bottom:22px;
+  text-shadow:0 2px 20px rgba(0,0,0,.3);
+}
+.hero h1 em{color:var(--gold-light);font-style:italic}
+.hero p{
+  font-size:1.15rem;color:rgba(255,255,255,.82);
+  margin-bottom:42px;max-width:540px;
+}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap}
+.hero-scroll{
+  position:absolute;bottom:40px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  color:rgba(255,255,255,.5);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;
+  animation:bounce 2s infinite;
+}
+.hero-scroll::after{
+  content:'';width:1px;height:40px;background:rgba(255,255,255,.3);
+}
+/* Floating card */
+.hero-stat-card{
+  position:absolute;right:80px;top:50%;transform:translateY(-50%);
+  background:rgba(255,255,255,.1);backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:var(--radius);padding:28px 32px;
+  color:var(--white);text-align:center;
+  animation:heroFadeIn 1.1s ease .3s both;
+}
+.hero-stat-card .stat{font-size:2.4rem;font-weight:700;font-family:'Playfair Display',serif;color:var(--gold-light)}
+.hero-stat-card .stat-label{font-size:.8rem;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:.08em;margin-top:4px}
+.hero-stat-card .divider{width:40px;height:1px;background:rgba(255,255,255,.25);margin:18px auto}
+
+@keyframes heroFadeIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+
+/* ── Packages Section ────────────────────────────────────── */
+.packages{padding:96px 0;background:var(--off-white)}
+.packages-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+}
+.pkg-card{
+  background:var(--white);border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow-sm);
+  transition:var(--transition);
+  display:flex;flex-direction:column;
+}
+.pkg-card:hover{
+  transform:translateY(-8px);
+  box-shadow:var(--shadow-lg);
+}
+.pkg-image{
+  height:220px;position:relative;overflow:hidden;
+  /*
+  ── PACKAGE IMAGE AREAS ───────────────────────────────────
+  Each card has a unique class: .pkg-family, .pkg-couple, .pkg-tulip
+  Add background images like:
+  .pkg-family  { background: url('../images/family-tour.jpg') center/cover; }
+  .pkg-couple  { background: url('../images/couple-tour.jpg') center/cover; }
+  .pkg-tulip   { background: url('../images/tulip-garden.jpg') center/cover; }
+  ─────────────────────────────────────────────────────────
+  */
+}
+.pkg-family {background:linear-gradient(135deg,#1a4a6b 0%,#2d8faa 100%)}
+.pkg-couple {background:linear-gradient(135deg,#4a1a4a 0%,#aa2d8f 100%)}
+.pkg-tulip  {background:linear-gradient(135deg,#1a4a2a 0%,#2daa6f 100%)}
+.pkg-image-icon{
+  position:absolute;inset:0;display:grid;place-items:center;
+  font-size:4rem;opacity:.35;
+}
+.pkg-badge{
+  position:absolute;top:16px;left:16px;
+  background:var(--gold);color:var(--navy);
+  font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  padding:5px 12px;border-radius:100px;
+}
+.pkg-body{padding:26px;flex:1;display:flex;flex-direction:column}
+.pkg-meta{
+  display:flex;gap:16px;margin-bottom:12px;
+}
+.pkg-meta span{
+  font-size:.8rem;color:var(--text-muted);font-weight:500;
+  display:flex;align-items:center;gap:5px;
+}
+.pkg-meta span::before{font-size:.9rem}
+.pkg-duration::before{content:'🕐'}
+.pkg-price-tag::before{content:'💰'}
+.pkg-body h3{color:var(--navy);margin-bottom:10px}
+.pkg-body p{color:var(--text-muted);font-size:.9rem;flex:1;margin-bottom:24px}
+.pkg-footer{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:18px;border-top:1px solid var(--border);
+  margin-top:auto;
+}
+.pkg-price{
+  font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--navy);
+}
+.pkg-price sup{font-size:.9rem;font-weight:400}
+.pkg-price small{font-size:.75rem;color:var(--text-muted);font-weight:400;font-family:'DM Sans',sans-serif}
+.pkg-card .btn{padding:10px 22px;font-size:.85rem}
+
+/* ── Video Reviews ───────────────────────────────────────── */
+.video-section{padding:96px 0;background:var(--navy)}
+.video-section .section-title{color:var(--white)}
+.video-section .section-tag{color:var(--gold-light);background:rgba(212,168,83,.15)}
+.video-section .section-sub{color:rgba(255,255,255,.6)}
+.videos-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.video-card{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:var(--radius);
+  overflow:hidden;
+  transition:var(--transition);
+}
+.video-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(13,148,136,.5);
+  box-shadow:0 16px 40px rgba(0,0,0,.4);
+}
+.video-wrapper{
+  position:relative;padding-top:56.25%;background:#0a1628;
+}
+.video-wrapper video{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+}
+/*
+── VIDEO PLACEHOLDER — Replace with real videos later ──────
+<video controls poster="images/video-thumb-1.jpg">
+  <source src="videos/review-1.mp4" type="video/mp4">
+</video>
+──────────────────────────────────────────────────────────
+*/
+.video-placeholder{
+  position:absolute;inset:0;display:grid;place-items:center;
+  background:linear-gradient(135deg,#0a1628,#134074);
+}
+.video-play-btn{
+  width:64px;height:64px;background:rgba(255,255,255,.15);
+  border:2px solid rgba(255,255,255,.4);border-radius:50%;
+  display:grid;place-items:center;
+  transition:var(--transition);cursor:pointer;
+}
+.video-play-btn::after{
+  content:'▶';color:var(--white);font-size:1.2rem;margin-left:4px;
+}
+.video-card:hover .video-play-btn{background:var(--teal);border-color:var(--teal)}
+.video-info{padding:18px}
+.video-info h4{color:var(--white);font-family:'DM Sans',sans-serif;font-weight:600;margin-bottom:6px}
+.video-info p{color:rgba(255,255,255,.5);font-size:.85rem}
+
+/* ── Testimonials ────────────────────────────────────────── */
+.testimonials{padding:96px 0;background:var(--white)}
+.trust-bar{
+  display:flex;align-items:center;justify-content:center;gap:24px;
+  margin-bottom:56px;
+  background:linear-gradient(135deg,var(--navy),var(--blue));
+  border-radius:var(--radius);padding:28px 40px;
+  flex-wrap:wrap;
+}
+.trust-rating{
+  display:flex;align-items:center;gap:14px;
+}
+.stars{font-size:1.5rem;letter-spacing:2px}
+.rating-text h3{color:var(--white);font-size:2rem;margin-bottom:2px}
+.rating-text p{color:rgba(255,255,255,.65);font-size:.85rem}
+.trust-divider{width:1px;height:50px;background:rgba(255,255,255,.2)}
+.trust-badge{
+  display:flex;align-items:center;gap:12px;
+  color:var(--white);
+}
+.trust-badge .badge-icon{font-size:2rem}
+.trust-badge p{font-size:.8rem;color:rgba(255,255,255,.6);max-width:180px}
+.reviews-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.review-card{
+  background:var(--off-white);border-radius:var(--radius);
+  padding:28px;border:1px solid var(--border);
+  transition:var(--transition);position:relative;
+}
+.review-card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow-md);
+  border-color:var(--teal);
+}
+.review-quote{
+  font-size:3rem;line-height:1;color:var(--teal);
+  font-family:'Playfair Display',serif;margin-bottom:12px;
+}
+.review-card p{color:var(--text);font-size:.95rem;margin-bottom:20px;font-style:italic}
+.reviewer{display:flex;align-items:center;gap:12px}
+.reviewer-avatar{
+  width:44px;height:44px;border-radius:50%;
+  background:linear-gradient(135deg,var(--teal),var(--blue));
+  display:grid;place-items:center;
+  font-family:'Playfair Display',serif;font-weight:700;color:var(--white);font-size:1.1rem;
+  flex-shrink:0;
+}
+.reviewer-name{font-weight:600;color:var(--navy);font-size:.9rem}
+.reviewer-stars{font-size:.75rem;color:var(--gold)}
+
+/* ── CTA Section ─────────────────────────────────────────── */
+.cta-section{
+  padding:100px 0;
+  background:
+    linear-gradient(160deg,rgba(11,31,58,.92) 0%,rgba(13,148,136,.65) 100%),
+    /*
+    ── CTA BACKGROUND IMAGE ──────────────────────────────────
+    Replace with: url('../images/cta-kashmir.jpg') center/cover no-repeat
+    ─────────────────────────────────────────────────────────
+    */
+    linear-gradient(135deg,#0b1f3a 0%,#0d9488 100%);
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+.cta-section::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 50% 50%,rgba(13,148,136,.2) 0%,transparent 70%);
+}
+.cta-section .container{position:relative;z-index:1}
+.cta-section h2{color:var(--white);margin-bottom:16px}
+.cta-section p{color:rgba(255,255,255,.75);font-size:1.1rem;max-width:520px;margin:0 auto 40px}
+.cta-perks{
+  display:flex;justify-content:center;gap:32px;flex-wrap:wrap;
+  margin-bottom:40px;
+}
+.cta-perk{
+  display:flex;align-items:center;gap:8px;
+  color:rgba(255,255,255,.85);font-size:.9rem;font-weight:500;
+}
+.cta-perk::before{font-size:1rem}
+
+/* ── Footer ──────────────────────────────────────────────── */
+.site-footer{background:#07131f;color:rgba(255,255,255,.7);padding:64px 0 0}
+.footer-grid{
+  display:grid;grid-template-columns:2fr 1fr 1fr;gap:56px;
+  padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08);
+}
+.footer-brand .nav-logo{margin-bottom:18px}
+.footer-brand p{font-size:.9rem;line-height:1.7;max-width:300px}
+.footer-contact{margin-top:24px;display:flex;flex-direction:column;gap:10px}
+.footer-contact a,.footer-contact span{
+  font-size:.85rem;color:rgba(255,255,255,.55);
+  display:flex;align-items:flex-start;gap:10px;transition:color .25s;
+}
+.footer-contact a:hover{color:var(--teal-light)}
+.footer-contact .contact-icon{flex-shrink:0;margin-top:2px}
+.footer-col h4{
+  font-family:'DM Sans',sans-serif;font-weight:600;font-size:.85rem;
+  text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);
+  margin-bottom:20px;
+}
+.footer-col ul{display:flex;flex-direction:column;gap:10px}
+.footer-col ul a{
+  color:rgba(255,255,255,.65);font-size:.9rem;transition:color .25s;
+}
+.footer-col ul a:hover{color:var(--teal-light)}
+.footer-bottom{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px 0;
+  font-size:.8rem;color:rgba(255,255,255,.3);
+  flex-wrap:wrap;gap:12px;
+}
+
+/* ── About Page ──────────────────────────────────────────── */
+.page-hero{
+  padding:80px 0;
+  background:linear-gradient(160deg,var(--navy) 0%,var(--blue) 100%);
+  text-align:center;
+}
+.page-hero h1{color:var(--white);margin-bottom:14px}
+.page-hero p{color:rgba(255,255,255,.7);font-size:1.05rem;max-width:500px;margin:0 auto}
+.breadcrumb{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  margin-bottom:20px;font-size:.85rem;color:rgba(255,255,255,.5);
+}
+.breadcrumb a{color:var(--teal-light)}
+.breadcrumb span{color:rgba(255,255,255,.3)}
+
+.about-intro{padding:96px 0}
+.about-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
+}
+.about-grid.reverse{direction:rtl}
+.about-grid.reverse > *{direction:ltr}
+.about-image{
+  border-radius:var(--radius);overflow:hidden;
+  height:420px;position:relative;
+  box-shadow:var(--shadow-lg);
+  /*
+  ── ABOUT PAGE IMAGES ──────────────────────────────────────
+  .about-img-1 { background: url('../images/about-kashmir.jpg') center/cover; }
+  .about-img-2 { background: url('../images/team.jpg') center/cover; }
+  ─────────────────────────────────────────────────────────
+  */
+}
+.about-img-1{background:linear-gradient(135deg,#134074,#0d9488)}
+.about-img-2{background:linear-gradient(135deg,#4a1a6b,#134074)}
+.about-img-placeholder{
+  position:absolute;inset:0;display:grid;place-items:center;
+  font-size:5rem;opacity:.25;
+}
+.about-text .section-tag{display:inline-block}
+.about-text h2{color:var(--navy);margin-bottom:16px}
+.about-text p{color:var(--text-muted);margin-bottom:14px}
+.about-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px;
+}
+.about-stat{
+  text-align:center;background:var(--off-white);border-radius:10px;
+  padding:20px 12px;border:1px solid var(--border);
+}
+.about-stat .num{
+  font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:700;color:var(--navy);
+  display:block;
+}
+.about-stat p{font-size:.78rem;color:var(--text-muted);margin:0}
+
+.why-us{padding:80px 0;background:var(--off-white)}
+.why-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:28px;
+}
+.why-card{
+  background:var(--white);border-radius:var(--radius);
+  padding:36px 28px;border:1px solid var(--border);
+  text-align:center;transition:var(--transition);
+}
+.why-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--teal)}
+.why-icon{
+  width:64px;height:64px;margin:0 auto 20px;
+  background:linear-gradient(135deg,rgba(13,148,136,.12),rgba(19,64,116,.12));
+  border-radius:16px;display:grid;place-items:center;font-size:1.8rem;
+}
+.why-card h3{color:var(--navy);margin-bottom:10px;font-size:1.1rem}
+.why-card p{color:var(--text-muted);font-size:.88rem}
+
+/* ── Contact / Booking Page ──────────────────────────────── */
+.contact-section{padding:96px 0;background:var(--off-white)}
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1.6fr;gap:48px;align-items:start;
+}
+.contact-info h2{color:var(--navy);margin-bottom:14px}
+.contact-info p{color:var(--text-muted);font-size:.95rem;margin-bottom:32px}
+.info-cards{display:flex;flex-direction:column;gap:16px}
+.info-card{
+  display:flex;gap:16px;
+  background:var(--white);border-radius:12px;padding:20px;
+  border:1px solid var(--border);
+}
+.info-card .ic-icon{
+  width:46px;height:46px;flex-shrink:0;
+  background:linear-gradient(135deg,var(--teal),var(--blue));
+  border-radius:10px;display:grid;place-items:center;
+  font-size:1.2rem;
+}
+.info-card .ic-body h4{color:var(--navy);font-size:.95rem;margin-bottom:4px}
+.info-card .ic-body p,.info-card .ic-body a{
+  color:var(--text-muted);font-size:.85rem;
+}
+.info-card .ic-body a:hover{color:var(--teal)}
+
+.booking-form{
+  background:var(--white);border-radius:var(--radius);
+  padding:40px;box-shadow:var(--shadow-md);
+  border:1px solid var(--border);
+}
+.booking-form h3{color:var(--navy);margin-bottom:6px}
+.booking-form .form-sub{color:var(--text-muted);font-size:.9rem;margin-bottom:32px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+.form-group{margin-bottom:20px}
+.form-group label{
+  display:block;font-weight:600;font-size:.85rem;color:var(--navy);
+  margin-bottom:7px;letter-spacing:.02em;
+}
+.form-group label .req{color:var(--teal)}
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;padding:13px 16px;
+  border:1.5px solid var(--border);border-radius:8px;
+  font-family:'DM Sans',sans-serif;font-size:.9rem;color:var(--text);
+  background:var(--off-white);
+  transition:border-color .25s, box-shadow .25s;
+  outline:none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+  border-color:var(--teal);
+  box-shadow:0 0 0 3px rgba(13,148,136,.12);
+  background:var(--white);
+}
+.form-group textarea{resize:vertical;min-height:110px}
+.form-group select{cursor:pointer}
+.form-submit{
+  width:100%;padding:16px;font-size:1rem;
+  border-radius:10px;
+  background:linear-gradient(135deg,var(--teal),var(--blue));
+  color:var(--white);font-weight:600;border:none;cursor:pointer;
+  font-family:'DM Sans',sans-serif;
+  transition:var(--transition);
+  box-shadow:0 4px 20px rgba(13,148,136,.35);
+}
+.form-submit:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(13,148,136,.5)}
+.success-msg{
+  display:none;
+  background:rgba(13,148,136,.1);border:1px solid var(--teal);
+  border-radius:10px;padding:20px;text-align:center;
+  color:var(--teal);font-weight:600;margin-top:20px;
+}
+.success-msg.show{display:block}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media(max-width:1024px){
+  .hero-stat-card{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .nav-links.open{
+    display:flex;flex-direction:column;
+    position:absolute;top:100%;left:0;right:0;
+    background:rgba(11,31,58,.98);backdrop-filter:blur(12px);
+    padding:24px;gap:24px;border-bottom:1px solid rgba(255,255,255,.1);
+  }
+  .nav-links.open + .nav-cta{display:flex;padding:0 24px 20px;background:rgba(11,31,58,.98)}
+  .nav-toggle{display:flex}
+  .site-header{position:relative}
+
+  .packages-grid{grid-template-columns:1fr}
+  .videos-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr;gap:36px}
+  .about-grid.reverse{direction:ltr}
+  .about-stats{grid-template-columns:repeat(3,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .trust-bar{flex-direction:column;text-align:center}
+  .trust-divider{width:60px;height:1px}
+  .cta-perks{flex-direction:column;align-items:center}
+  .footer-bottom{justify-content:center;text-align:center}
+}
+@media(max-width:480px){
+  .hero-actions{flex-direction:column}
+  .about-stats{grid-template-columns:1fr 1fr}
+  .booking-form{padding:28px 20px}
+}
+</style>
+</head>
+<body>
+
+  <!-- ══ HEADER / NAV ═══════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="Caribbean Holidays Home">
+          <div class="logo-icon">CH</div>
+          <div class="logo-text">
+            Caribbean Holidays
+            <span>Kashmir Tour Operator</span>
+          </div>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary nav-cta">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══ PAGE HERO ════════════════════════════════════════ -->
+    <section class="page-hero" aria-label="About page hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">About Us</span>
+        </nav>
+        <h1>Our Story</h1>
+        <p>Born from a love of Kashmir, built on trust — we are Caribbean Holidays.</p>
+      </div>
+    </section>
+
+    <!-- ══ INTRODUCTION ════════════════════════════════════ -->
+    <section class="about-intro" aria-labelledby="about-intro-title">
+      <div class="container">
+        <div class="about-grid">
+
+          <!-- Image -->
+          <div class="about-image about-img-1" role="img" aria-label="Kashmir valley landscape placeholder">
+            <!--
+              REPLACE WITH IMAGE:
+              <img src="images/about-kashmir.jpg" alt="Beautiful Kashmir valley with snow-capped mountains">
+            -->
+            <div class="about-img-placeholder" aria-hidden="true">🏔️</div>
+          </div>
+
+          <!-- Text -->
+          <div class="about-text">
+            <span class="section-tag">Who We Are</span>
+            <h2 id="about-intro-title">Caribbean Holidays — Your Kashmir Gateway</h2>
+            <p>Caribbean Holidays is a premier tour operator based in the heart of Srinagar, Jammu &amp; Kashmir. We specialise in crafting personalised Kashmir travel experiences that go beyond just a trip — we create stories worth telling.</p>
+            <p>Founded with a deep passion for Kashmir's unparalleled beauty, our team brings together local expertise, genuine hospitality, and a commitment to making every traveller feel at home in the Valley of Paradise.</p>
+            <p>From the serene waters of Dal Lake to the flower-filled meadows of Gulmarg and Pahalgam, we know Kashmir inside out — and we're here to share it with you.</p>
+
+            <div class="about-stats">
+              <div class="about-stat">
+                <span class="num">500+</span>
+                <p>Happy Travellers</p>
+              </div>
+              <div class="about-stat">
+                <span class="num">⭐ 5.0</span>
+                <p>Google Rating</p>
+              </div>
+              <div class="about-stat">
+                <span class="num">5+</span>
+                <p>Years Experience</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ MISSION & VISION ════════════════════════════════ -->
+    <section style="padding:80px 0;background:var(--off-white)" aria-labelledby="mission-title">
+      <div class="container">
+        <div class="about-grid reverse">
+
+          <!-- Text -->
+          <div class="about-text">
+            <span class="section-tag">Mission &amp; Vision</span>
+            <h2 id="mission-title">Crafting Experiences, Building Memories</h2>
+            <p><strong style="color:var(--navy)">Our Mission:</strong> To deliver exceptional, personalised Kashmir travel experiences that connect visitors with the true beauty, culture, and warmth of the valley — at the best possible value.</p>
+            <p><strong style="color:var(--navy)">Our Vision:</strong> To be Srinagar's most trusted and loved tour operator — known not just for great packages, but for the genuine care we put into every single journey we plan.</p>
+            <p>We believe travel should be effortless and joyful. That's why we handle every detail — from hotel bookings and transport to guided sightseeing and local dining recommendations — so you can simply enjoy being in Kashmir.</p>
+            <a href="contact.html" class="btn btn-primary" style="margin-top:24px">Plan Your Trip</a>
+          </div>
+
+          <!-- Image -->
+          <div class="about-image about-img-2" role="img" aria-label="Team at Caribbean Holidays placeholder">
+            <!--
+              REPLACE WITH IMAGE:
+              <img src="images/mission-kashmir.jpg" alt="Suhail and the Caribbean Holidays team">
+            -->
+            <div class="about-img-placeholder" aria-hidden="true">🌷</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ WHY CHOOSE US ═══════════════════════════════════ -->
+    <section class="why-us" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Why Choose Us</span>
+          <h2 class="section-title" id="why-title">The Caribbean Holidays Difference</h2>
+          <p class="section-sub">We're not just a travel agency — we're your Kashmir insiders.</p>
+        </div>
+
+        <div class="why-grid">
+
+          <div class="why-card">
+            <div class="why-icon" aria-hidden="true">🗺️</div>
+            <h3>Local Expertise</h3>
+            <p>Born and raised in Srinagar, our team knows every hidden gem, best route, and seasonal secret that only locals know. Your trip will be authentic, not touristy.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon" aria-hidden="true">✨</div>
+            <h3>Personalised Packages</h3>
+            <p>No two trips are the same. We tailor every itinerary to your preferences, budget, and travel style — whether you're a family, couple, or solo adventurer.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon" aria-hidden="true">🏨</div>
+            <h3>Handpicked Stays</h3>
+            <p>Every hotel, houseboat, and cottage we partner with is personally vetted for cleanliness, comfort, and hospitality. Only the best makes our list.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon" aria-hidden="true">💬</div>
+            <h3>24/7 Support</h3>
+            <p>From the moment you book until you return home, our team is just a call or message away. We're with you every step of the journey.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon" aria-hidden="true">💰</div>
+            <h3>Best Value</h3>
+            <p>We leverage our local network to offer the best deals on hotels, transport, and activities — passing those savings directly to you without compromising quality.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon" aria-hidden="true">⭐</div>
+            <h3>Proven Track Record</h3>
+            <p>A perfect 5.0 rating on Google with 16 genuine reviews speaks for itself. Hundreds of happy travellers trust us year after year — and return for more.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ ABOUT THE OWNER ═════════════════════════════════ -->
+    <section style="padding:80px 0" aria-labelledby="owner-title">
+      <div class="container">
+        <div style="max-width:760px;margin:0 auto;text-align:center">
+          <span class="section-tag">Meet the Team</span>
+          <h2 id="owner-title" style="color:var(--navy);margin-bottom:20px">Suhail — Your Kashmir Guide</h2>
+          <div style="width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--blue));margin:0 auto 24px;display:grid;place-items:center;font-size:2.5rem" aria-hidden="true">
+            <!--
+              REPLACE WITH PHOTO:
+              <img src="images/suhail.jpg" alt="Suhail, founder of Caribbean Holidays" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
+            -->
+            🧑‍💼
+          </div>
+          <p style="color:var(--text-muted);font-size:1.05rem;line-height:1.8;margin-bottom:16px">
+            Suhail is the heart and soul of Caribbean Holidays. A lifelong resident of Srinagar with an unmatched passion for Kashmir's landscapes and culture, he founded Caribbean Holidays with one simple goal: to share the magic of Kashmir with every traveller who walks through his door.
+          </p>
+          <p style="color:var(--text-muted)">
+            Known for his warm hospitality, deep local knowledge, and dedication to customer satisfaction, Suhail personally ensures every guest receives the best possible experience. His personal touch is why so many travellers return — and why reviews always mention him by name.
+          </p>
+          <a href="contact.html" class="btn btn-primary" style="margin-top:32px">Get in Touch with Suhail</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ CTA ════════════════════════════════════════════ -->
+    <section class="cta-section" aria-labelledby="about-cta-title">
+      <div class="container">
+        <span class="section-tag">Ready to Go?</span>
+        <h2 id="about-cta-title">Let's Plan Your Perfect Kashmir Trip</h2>
+        <p>Reach out today for a free personalised itinerary — no commitment required.</p>
+        <div class="cta-perks">
+          <div class="cta-perk"><span>✅</span> Free Consultation</div>
+          <div class="cta-perk"><span>✅</span> No Hidden Charges</div>
+          <div class="cta-perk"><span>✅</span> Flexible Dates</div>
+        </div>
+        <a href="contact.html" class="btn btn-gold">Plan Your Trip →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ FOOTER ════════════════════════════════════════════ -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="logo-icon">CH</div>
+            <div class="logo-text" style="color:#fff">Caribbean Holidays<span>Kashmir Tour Operator</span></div>
+          </div>
+          <p>Your trusted partner for unforgettable Kashmir travel experiences. Creating memories one journey at a time from the heart of Srinagar.</p>
+          <div class="footer-contact">
+            <span><span class="contact-icon" aria-hidden="true">📍</span>1st Floor, Qureshi Estates, Maidanpora, Block-B, Karan Nagar, Srinagar, J&amp;K 190010</span>
+            <a href="tel:+919149475834"><span class="contact-icon" aria-hidden="true">📞</span>+91 91494 75834</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="index.html#packages">Packages</a></li>
+            <li><a href="index.html#reviews">Reviews</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Tour Packages</h4>
+          <ul>
+            <li><a href="contact.html?package=family">Family Tour</a></li>
+            <li><a href="contact.html?package=couple">Couple Tour</a></li>
+            <li><a href="contact.html?package=tulip">Tulip Garden Tour</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Caribbean Holidays. All rights reserved. | Srinagar, Jammu &amp; Kashmir</p>
+        <p>Designed with ❤️ for Kashmir travellers</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  </script>
+
+</body>
+</html>
